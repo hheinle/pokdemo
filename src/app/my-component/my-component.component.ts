@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Pokemon} from '../pokemon';
+import {PokeApiService} from '../poke-api-service.service';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-my-component',
@@ -18,7 +20,8 @@ export class MyComponentComponent implements OnInit {
   pokemonChoice = '';
   searchedString = '';
 
-  constructor() {
+  constructor(private pokeApiService: PokeApiService) {
+    this.pokeApiService.getListPokemons().subscribe((result: Observable<any>) => {console.log(result); });
     this.Pikachu = new Pokemon('Pikachu');
     this.Evoli = new Pokemon('Evoli');
     this.Carapuce = new Pokemon('Carapuce');

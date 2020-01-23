@@ -9,6 +9,7 @@ export class FilterPokemonPipePipe implements PipeTransform {
     if (typeof pokemons !== 'undefined') {
       return pokemons.filter((e) => {
         // return e[property].toLowerCase().indexOf(searchString.toLowerCase()) !== -1;
+        console.log(pokemons.filter(pokemon => pokemon.name === searchedName));
         return searchedName ? pokemons.filter(pokemon => pokemon.name === searchedName) : pokemons;
       });
     } else {
