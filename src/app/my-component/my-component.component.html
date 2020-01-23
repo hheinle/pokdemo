@@ -1,7 +1,4 @@
-<div style="text-align:center">
-  <h1>
-    {{ title }} !
-  </h1>
+<div style="text-align:left">
   <p>Test clone : {{test}}</p>
   <div>
     <label> Test
@@ -11,24 +8,25 @@
       <input type="text" readOnly value={{test}} />
     </label>
   </div>
+</div>
+<div style="text-align:center">
   <div>
-    <label> Filtrer les Pokemons
-      <input type="text" [(ngModel)]="searchedString"/>
-    </label>
+    <h1>
+      {{title}}
+    </h1>
     <label> Choissisez votre Pokemon
-      <select ng-init="default = options[0]" [(ngModel)]="pokemonChoice">
-        <option *ngFor="let pokemon of pokemons | filterPokemonPipe: searchedString">
-          {{pokemon.name}}
-        </option>
-      </select>
+      <input type="text" [(ngModel)]="searchedString" placeholder="filtrer la liste"/>
     </label>
-    <label> Vous avez sélectionné
+    <select ng-init="default = options[0]" [(ngModel)]="pokemonChoice" (change)="sendChoiceToComponent2()">
+      <option *ngFor="let pokemon of pokemons | filterPokemonPipe: searchedString">
+        {{pokemon.name}}
+      </option>
+    </select>
+    <label> Votre choix
       <input type="text" readOnly value={{pokemonChoice}} />
     </label>
   </div>
   <div style="text-align: center">
-    <button (click)="go()">Go print choice !</button>
+    <button (click)="go()">Logger choix </button>
   </div>
-  <app-show-pokemons-component [childMessage]=pokemonChoice></app-show-pokemons-component>
-
 </div>

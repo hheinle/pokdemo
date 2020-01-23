@@ -1,10 +1,13 @@
-<p>show-pokemons-component works!</p>
 <div style="text-align: center">
-  <button (click)="getInfosPokemon(childMessage)">Infos sur ce pokemon</button>
-  <p>Id de votre Pokemon : {{pokemonInfos.id}}</p>
-  <p>taille de votre Pokemon : {{pokemonInfos.height}}</p>
-  <p>Son nom : {{pokemonInfos.name}}</p>
-  <p>Types : </p>
+  <button (click)="getInfosPokemon(pokemonChoice)">Infos sur ce pokemon</button>
+  <br>
+  Id de votre Pokemon : {{pokemonInfos.id}}
+  <br>
+  Taille de votre Pokemon : {{pokemonInfos.height}}
+  <br>
+  Son nom : {{pokemonInfos.name}}
+  <br>
+    Types :
   <p *ngFor="let type of pokemonInfos.types">
     {{type.type.name}}
   </p>

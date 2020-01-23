@@ -1,25 +1,25 @@
 export class Pokemon {
-  private _name: string;
-  private _stats: string;
+  private _namePokemon: string;
+  private _statsPokemon: string;
 
   constructor(name: string, stats: string) {
-    this._name = name;
-    this._stats = stats;
+    this._namePokemon = name;
+    this._statsPokemon = stats;
   }
 
-  get name(): string {
-    return this._name;
+  get namePokemon(): string {
+    return this._namePokemon;
   }
 
-  set name(value: string) {
-    this._name = value;
+  set namePokemon(value: string) {
+    this._namePokemon = value;
   }
 
-  get stats(): string {
-    return this._stats;
+  get statsPokemon(): string {
+    return this._statsPokemon;
   }
 
-  set stats(value: string) {
-    this._stats = value;
+  set statsPokemon(value: string) {
+    this._statsPokemon = value;
   }
 }
