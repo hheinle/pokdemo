@@ -2,13 +2,13 @@
   <h1>
     {{ title }} !
   </h1>
-  <p>Id clone : {{id}}</p>
+  <p>Test clone : {{test}}</p>
   <div>
-    <label> Saisissez un id
-      <input type="text" [(ngModel)]="id" />
+    <label> Test
+      <input type="text" [(ngModel)]="test" />
     </label>
-    <label> Clone
-      <input type="text" readOnly value={{id}} />
+    <label> Clone test
+      <input type="text" readOnly value={{test}} />
     </label>
   </div>
   <div>
@@ -16,7 +16,7 @@
       <input type="text" [(ngModel)]="searchedString"/>
     </label>
     <label> Choissisez votre Pokemon
-      <select [(ngModel)]="pokemonChoice">
+      <select ng-init="default = options[0]" [(ngModel)]="pokemonChoice">
         <option *ngFor="let pokemon of pokemons | filterPokemonPipe: searchedString">
           {{pokemon.name}}
         </option>
@@ -27,6 +27,17 @@
     </label>
   </div>
   <div style="text-align: center">
-    <button (click)="go()">Go !</button>
+    <button (click)="go()">Go print choice !</button>
+  </div>
+
+  <div style="text-align: center">
+    <button (click)="getInfosPokemon(pokemonChoice)">Infos sur ce pokemon</button>
+    <p>Id de votre Pokemon : {{pokemonInfos.id}}</p>
+    <p>taille de votre Pokemon : {{pokemonInfos.height}}</p>
+    <p>Son nom : {{pokemonInfos.name}}</p>
+    <p>Types : </p>
+    <p *ngFor="let type of pokemonInfos.types">
+      {{type.type.name}}
+    </p>
   </div>
 </div>
