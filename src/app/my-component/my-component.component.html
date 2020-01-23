@@ -1,12 +1,22 @@
 <div style="text-align:center">
   <h1>
-    {{ title }}!
+    {{ title }} !
   </h1>
   <p>Id clone : {{id}}</p>
   <label> Saisissez un id
     <input type="text" [(ngModel)]="id" />
   </label>
   <label> Clone
+    <input type="text" readOnly value={{id}} />
+  </label>
+  <label> Choissisez votre Pokemon
+    <select>
+      <option *ngFor="let pokemon of pokemons">
+        {{pokemon.name}}
+      </option>
+    </select>
+  </label>
+  <label> Vous avez sélectionné
     <input type="text" readOnly value={{id}} />
   </label>
 </div>
