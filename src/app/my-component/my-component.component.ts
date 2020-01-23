@@ -8,13 +8,15 @@ import {Pokemon} from '../pokemon';
 })
 export class MyComponentComponent implements OnInit {
   title = 'pokdemo';
-  id = '651164654';
+  id = '';
   private Pikachu: Pokemon;
   private Evoli: Pokemon;
   private Carapuce: Pokemon;
   private Mimantis: Pokemon;
   private Ponyta: Pokemon;
   private pokemons: any[];
+  pokemonChoice = '';
+  searchedString = '';
 
   constructor() {
     this.Pikachu = new Pokemon('Pikachu');
