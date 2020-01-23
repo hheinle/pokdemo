@@ -11,26 +11,17 @@ import {Observable} from 'rxjs';
 export class MyComponentComponent implements OnInit {
   title = 'pokdemo';
   id = '';
-  private Pikachu: Pokemon;
-  private Evoli: Pokemon;
-  private Carapuce: Pokemon;
-  private Mimantis: Pokemon;
-  private Ponyta: Pokemon;
-  private pokemons: any[];
+  private pokemons: Pokemon[] = [];
   pokemonChoice = '';
   searchedString = '';
 
   constructor(private pokeApiService: PokeApiService) {
-    this.pokeApiService.getListPokemons().subscribe((result: Observable<any>) => {console.log(result); });
-    this.Pikachu = new Pokemon('Pikachu');
-    this.Evoli = new Pokemon('Evoli');
-    this.Carapuce = new Pokemon('Carapuce');
-    this.Mimantis = new Pokemon('Mimantis');
-    this.Ponyta = new Pokemon('Ponyta');
-    this.pokemons = [this.Pikachu, this.Evoli, this.Carapuce, this.Mimantis, this.Ponyta];
+
   }
 
   ngOnInit() {
+    this.pokeApiService.getListPokemons().subscribe(result => { this.pokemons = result.results; console.log(result.results); });
+
   }
 
   go() {
