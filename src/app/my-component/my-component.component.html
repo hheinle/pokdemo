@@ -1,0 +1,16 @@
+<p>Id :{{id}}</p>
+<div>
+  <label>
+    <input [(ngModel)]="id" type="text">
+  </label>
+</div>
+
+<div>
+  <label>
+    <input type="text" readonly value={{id}}>
+  </label>
+</div>
+<div>
+  <select *ngFor="let pokemon of pokemons">{{pokemon.name}}</select>
+</div>
+
