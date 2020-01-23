@@ -7,21 +7,23 @@ import {Pokemon} from '../pokemon';
   styleUrls: ['./my-component.component.css']
 })
 export class MyComponentComponent implements OnInit {
-
-  id = '';
-  private pokemons: any[];
+  title = 'pokdemo';
+  id = '651164654';
   private Pikachu: Pokemon;
-  private Smogogo: Pokemon;
-  private Miaouss: Pokemon;
-  private Bulbizar: Pokemon;
+  private Evoli: Pokemon;
+  private Carapuce: Pokemon;
+  private Mimantis: Pokemon;
+  private Ponyta: Pokemon;
+  private pokemons: any[];
 
   constructor() {
     this.Pikachu = new Pokemon('Pikachu');
-    this.Smogogo = new Pokemon('Smogogo');
-    this.Miaouss = new Pokemon('Miaouss');
-    this.Bulbizar = new Pokemon('Bulbizar');
+    this.Evoli = new Pokemon('Evoli');
+    this.Carapuce = new Pokemon('Carapuce');
+    this.Mimantis = new Pokemon('Mimantis');
+    this.Ponyta = new Pokemon('Ponyta');
+    this.pokemons = [this.Pikachu, this.Evoli, this.Carapuce, this.Mimantis, this.Ponyta];
   }
-
 
   ngOnInit() {
   }
