@@ -33,4 +33,8 @@ export class MyComponentComponent implements OnInit {
   ngOnInit() {
   }
 
+  go() {
+    console.log('Id recherché : ',this.id);
+    console.log('Pokemon choisi : ',this.pokemonChoice);
+  }
 }
