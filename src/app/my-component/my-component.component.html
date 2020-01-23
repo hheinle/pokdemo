@@ -3,20 +3,27 @@
     {{ title }} !
   </h1>
   <p>Id clone : {{id}}</p>
-  <label> Saisissez un id
-    <input type="text" [(ngModel)]="id" />
-  </label>
-  <label> Clone
-    <input type="text" readOnly value={{id}} />
-  </label>
-  <label> Choissisez votre Pokemon
-    <select>
-      <option *ngFor="let pokemon of pokemons">
-        {{pokemon.name}}
-      </option>
-    </select>
-  </label>
-  <label> Vous avez sélectionné
-    <input type="text" readOnly value={{id}} />
-  </label>
+  <div>
+    <label> Saisissez un id
+      <input type="text" [(ngModel)]="id" />
+    </label>
+    <label> Clone
+      <input type="text" readOnly value={{id}} />
+    </label>
+  </div>
+  <div>
+    <label> Filtrer les Pokemons
+      <input type="text" [(ngModel)]="searchedString"/>
+    </label>
+    <label> Choissisez votre Pokemon
+      <select [(ngModel)]="pokemonChoice">
+        <option *ngFor="let pokemon of pokemons | filterPokemonPipe: searchedString">
+          {{pokemon.name}}
+        </option>
+      </select>
+    </label>
+    <label> Vous avez sélectionné
+      <input type="text" readOnly value={{pokemonChoice}} />
+    </label>
+  </div>
 </div>
