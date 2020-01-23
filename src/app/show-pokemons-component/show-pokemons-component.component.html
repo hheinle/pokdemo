@@ -1,0 +1,11 @@
+<p>show-pokemons-component works!</p>
+<div style="text-align: center">
+  <button (click)="getInfosPokemon(childMessage)">Infos sur ce pokemon</button>
+  <p>Id de votre Pokemon : {{pokemonInfos.id}}</p>
+  <p>taille de votre Pokemon : {{pokemonInfos.height}}</p>
+  <p>Son nom : {{pokemonInfos.name}}</p>
+  <p>Types : </p>
+  <p *ngFor="let type of pokemonInfos.types">
+    {{type.type.name}}
+  </p>
+</div>

@@ -14,7 +14,6 @@ export class MyComponentComponent implements OnInit {
   private pokemons: Pokemon[] = [];
   pokemonChoice = '';
   searchedString = '';
-  pokemonInfos = Pokemon;
 
   constructor(private pokeApiService: PokeApiService) {
 
@@ -29,10 +28,5 @@ export class MyComponentComponent implements OnInit {
     console.log('Pokemon choisi : ', this.pokemonChoice);
   }
 
-  getInfosPokemon(pokemon: string) {
-    console.log('le nom du pokemon : ', pokemon);
-    this.pokeApiService.getPokemonById(pokemon).subscribe(result => {
-      this.pokemonInfos = result; console.log('infos du pokemon : ', result);
-    });
-  }
+
 }

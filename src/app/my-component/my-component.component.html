@@ -29,15 +29,6 @@
   <div style="text-align: center">
     <button (click)="go()">Go print choice !</button>
   </div>
+  <app-show-pokemons-component [childMessage]=pokemonChoice></app-show-pokemons-component>
 
-  <div style="text-align: center">
-    <button (click)="getInfosPokemon(pokemonChoice)">Infos sur ce pokemon</button>
-    <p>Id de votre Pokemon : {{pokemonInfos.id}}</p>
-    <p>taille de votre Pokemon : {{pokemonInfos.height}}</p>
-    <p>Son nom : {{pokemonInfos.name}}</p>
-    <p>Types : </p>
-    <p *ngFor="let type of pokemonInfos.types">
-      {{type.type.name}}
-    </p>
-  </div>
 </div>
