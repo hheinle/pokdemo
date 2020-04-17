@@ -45,7 +45,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div style=\"text-align:left\">\n  <p>Test clone : {{test}}</p>\n  <div>\n    <label> Test\n      <input type=\"text\" [(ngModel)]=\"test\" />\n    </label>\n    <label> Clone test\n      <input type=\"text\" readOnly value={{test}} />\n    </label>\n  </div>\n</div>\n<div style=\"text-align:center\">\n  <div>\n    <h1>\n      {{title}}\n    </h1>\n    <label> Choissisez votre Pokemon\n      <input type=\"text\" [(ngModel)]=\"searchedString\" placeholder=\"filtrer la liste\"/>\n    </label>\n    <select ng-init=\"default = options[0]\" [(ngModel)]=\"pokemonChoice\" (change)=\"sendChoiceToComponent2()\">\n      <option *ngFor=\"let pokemon of pokemons | filterPokemonPipe: searchedString\">\n        {{pokemon.name}}\n      </option>\n    </select>\n    <label> Votre choix\n      <input type=\"text\" readOnly value={{pokemonChoice}} />\n    </label>\n  </div>\n  <div style=\"text-align: center\">\n    <button (click)=\"go()\">Logger choix </button>\n  </div>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div style=\"text-align:center\">\n  <div>\n    <h1>\n      {{title}}\n    </h1>\n    <label> Choissisez votre Pokemon\n      <input type=\"text\" [(ngModel)]=\"searchedString\" placeholder=\"filtrer la liste\"/>\n    </label>\n    <select ng-init=\"default = options[0]\" [(ngModel)]=\"pokemonChoice\" (change)=\"sendChoiceToComponent2()\">\n      <option *ngFor=\"let pokemon of pokemons | filterPokemonPipe: searchedString\">\n        {{pokemon.name}}\n      </option>\n    </select>\n    <label> Votre choix\n      <input type=\"text\" readOnly value={{pokemonChoice}} />\n    </label>\n  </div>\n  <div style=\"text-align: center\">\n    <button (click)=\"go()\">Logger choix </button>\n  </div>\n</div>\n");
 
 /***/ }),
 
@@ -330,7 +330,7 @@ AppRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIn0= */");
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi8uLi9zcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIn0= */");
 
 /***/ }),
 
@@ -464,7 +464,7 @@ FilterPokemonPipePipe = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL215LWNvbXBvbmVudC9teS1jb21wb25lbnQuY29tcG9uZW50LmNzcyJ9 */");
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi8uLi9zcmMvYXBwL215LWNvbXBvbmVudC9teS1jb21wb25lbnQuY29tcG9uZW50LmNzcyJ9 */");
 
 /***/ }),
 
@@ -648,7 +648,7 @@ ShareService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Nob3ctcG9rZW1vbnMtY29tcG9uZW50L3Nob3ctcG9rZW1vbnMtY29tcG9uZW50LmNvbXBvbmVudC5jc3MifQ== */");
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi8uLi9zcmMvYXBwL3Nob3ctcG9rZW1vbnMtY29tcG9uZW50L3Nob3ctcG9rZW1vbnMtY29tcG9uZW50LmNvbXBvbmVudC5jc3MifQ== */");
 
 /***/ }),
 
